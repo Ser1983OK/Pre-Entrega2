@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../css/estilos.css">
+    <title>Document</title>
+</head>
+<body class="body__seccion5"> 
+
+    <header class="header__grid">
+
+        <div class="logo">
+            <img src= "../Imagenes/Logo.jpg" alt="logo de la empresa">    
+        </div>
+        <nav>
+            <ul class="menu__alto">   
+                <li> <a href="https://wa.me/541144031232"> Whats App al 4256879188 </a> </li>
+                <li> <a href="mailto:info@malaku.com"> mail a Info@malaku.com</a> </li></div>
+            </ul>
+
+            
+            <ul class="menu__bajo">    
+                    <li> <a href= "../index.html" > Home </a></li>
+                    <li> <a href= "../pages/seccion2.html" > Productos </a></li>
+                    <li> <a href= "../pages/seccion3.html" > Quienes Somos </a> </li>
+                    <li> <a href= "../pages/seccion4.html" >  Franquicias </a> </li>
+                    <li> <a href= "../pages/seccion5.html" > Contacto </a> </li>
+            </ul>  
+            
+        </nav>
+
+    </header>
+
+    <h2 class="titulo__pagina"> Contacto </h2>
+
+    <h3> Necesitas contactarte con nosotros?</h3>
+
+    <p> En Malalu Tea House trabajamos para que tengas la mejor experiencia posible. Por consultas sobre compra de productos,
+        servicio post-venta, solicitud o reclamo te invitamos a llenar el siguiente formulario. Un operador de atencion al
+        cliente se contactara contigo a la brevedad. Si no estas satisfecho con tu compra, adjunta el comprobante y recibiras
+        un vaucher instantaneo para utilizarlo en todos nuestros locales de nuestra cadena.  </p>
+
+
+    <form class="form" action="codigo.php" method="post">
+
+    <h3>Formulario de Contacto</h3>
+    
+     <label> Nombre <input type="text" required> </label><br>
+     <label> E-mail <input type="email" required></label><br>
+     
+    <label>Ingrese el tipo de Requerimiento</label>
+
+    <select name="Tipo de Requerimeinto"> 
+        <option value="Selecione">Seleccione</option>
+        <option value="Solicitud"> Solicitud</option>
+        <option value="Reclamo"> Reclamo</option>
+    </select>
+<br>
+
+    <label>Opciones</label>
+    
+    <select name="Opciones" class="formulario"> 
+        <option value="Seleccione">Seleccione</option>
+        <option value="Pre-Venta"> Pre-Venta</option>
+        <option value="Post-Venta"> Post-Venta</option> 
+
+    </select>
+<br>    
+
+    <label for="Consulta">Consulta</label>
+    <textarea name="Consulta" cols="100" rows="10"></textarea>
+<br>
+    <label for="Adjuntar Archivo">Adjuntar Archivo</label>
+    <input type="file">
+    <br> <br>
+    <input type="submit" value="Enviar Consulta">
+    <input type="reset" value="Reestablecer">
+
+</form>
+
+<footer class="footer__grid">
+    
+    <h3 class="footer__titulo"> Seguinos en nuestras Redes Sociales</h3>
+    <div class="icono__face"><img src= "../Imagenes/redes/face" alt= "icono facebook"></div>
+    <div class="icono__inst"><img src= "../Imagenes/redes/instagram.jpg" alt= "icono instagram"></div>
+    <div class="icono__twit"><img src= "../Imagenes/redes/twitter.jpg" alt= "icono twitter"></div>
+      
+
+</footer>
+
+    
+
+
+</body>
+</html>
