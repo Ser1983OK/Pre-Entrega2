@@ -723,7 +723,6 @@ main>.container {
     .logo img{
         height: 180px;
         align-items: center;
-        background-color: yellow;
         grid-area: img;
     }
 
