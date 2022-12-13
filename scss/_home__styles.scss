@@ -12,6 +12,55 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+<<<<<<< HEAD:scss/_home__styles.scss
+=======
+/* GRID PADRE - BODY*/
+
+.body__grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 6% 117% 6%;
+    grid-template-areas:
+    "header header header header header header header header header header header header"
+    "main main main main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer footer footer"
+}
+
+/* GRID HIJO - HEADER*/
+
+
+
+.header__grid {
+    
+    display: grid;
+    display: flex;
+    grid-area: header;
+    background-color: #D94E81;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    ". alto"
+    ". bajo";
+}
+
+/* LOGO */
+
+
+.logo {
+    display: flex;
+}
+
+.logo img{
+    height: 100px;
+    align-items: center;
+}
+
+
+>>>>>>> e1b66ae12f802f42470293c95fd2ab75387900fe:css/estilos.css
 
 /* ESTILO DE LAS OPCIONES EN LA BARRA MENU*/
 
@@ -467,6 +516,19 @@ footer {
 
 
 
+<<<<<<< HEAD:scss/_home__styles.scss
+=======
+    .slider__frame {
+	    width: 400px;           
+        margin-left: 70px;
+    }
+
+    .logo img{
+        height: 180px;
+        align-items: center;
+        grid-area: img;
+    }
+>>>>>>> e1b66ae12f802f42470293c95fd2ab75387900fe:css/estilos.css
 
 @media (max-width:781px) {
     
