@@ -1,0 +1,207 @@
+
+/*PARTIALS*/
+
+@use "home__styles";
+@use 'seccion2__styles';
+@use 'seccion3__styles';
+@use 'seccion4__styles';
+@use 'seccion5__styles';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Raleway:ital,wght@0,400;1,500&family=Roboto:wght@500&display=swap');
+
+/*VARIABLE*/
+
+$color__titulo: #D94E81;  
+
+
+/* @QUERRYS - RESPONSIVE*/
+
+/*ESTILOS DEL HEADER Y FOOTER - COMUN A TODAS LAS SECCIONES*/
+
+
+@media (max-width:1024px) {
+
+    .body__grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 6% 140% 6%;
+        grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    }
+
+    .menu__alto{
+        font-size: 18px;
+    }
+
+    .menu__bajo {
+        font-size: 18px;
+    }
+
+    .footer__titulo {
+        color: blue;
+        font-size: 22px;
+        margin-left: 50px;
+        grid-area: seguinos;
+        justify-items: center;
+    }
+}
+
+
+       
+@media (max-width:880px) {
+    
+    .body__grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 6% 125% 6%;
+        grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    }
+        
+        
+    .menu__alto{
+        font-size: 16px;
+    }
+        
+    .menu__bajo {
+        font-size: 16px;
+    }
+     
+    
+        
+    .footer__titulo {
+        color: blue;
+        font-size: 20px;
+        margin-left: 50px;
+        grid-area: seguinos;
+        justify-items: center;
+    }
+}
+
+@media (max-width:781px) {
+
+    .body__grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 18% 135% 6%;
+        grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    }
+
+    
+    .header__grid {
+        display: flex;
+        display: grid;
+        width: 700px;
+        grid-area: header;
+        background-color: #D94E81;
+        height: 330px;
+        padding: 10px; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 70% 30%;
+        grid-template-areas: 
+        "img"
+        "nav";
+    }
+
+    
+    .logo img{
+        height: 180px;
+        grid-area: img;
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+
+    
+
+    nav {
+        display: grid;
+        grid-area: nav;
+        width: 400px;
+        height: 200px;
+        margin-bottom: 280px;
+        margin-right: 130px;
+        grid-template-rows: 10%;
+    }
+
+    
+    .menu__alto {
+        display: flex;
+        width: 500px;
+        height: 200px;
+        flex-direction: row;
+        margin-bottom: 550px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        justify-content: space-between;
+        list-style: none;
+        font-size: 16px;
+        border-style: none;
+        margin-top: 20px;
+        grid-area: alto;
+    }
+
+    .menu__bajo {
+        display: flex;
+        width: 550px;
+        height: 50px;
+        flex-direction: row;
+        justify-content:flex-start ;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        align-content: space-around;
+        grid-area: bajo;
+        margin-top: 230px;
+        margin-left: 20px;
+    }
+
+    .footer__titulo {
+        color: blue;
+        font-size: 14px;
+        margin-left: 50px;
+        grid-area: seguinos;
+        justify-items: center;
+    }
+    
+}
+
+@media (max-width:714px) {
+
+    .body__grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 18% 130% 6%;
+        grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    }
+    
+    .header__grid {
+        width: 700px;
+    }
+    
+    
+    footer {
+        width: 700px;
+    }
+            
+}
+
+
+    
+
+
+    
+        
+     
+

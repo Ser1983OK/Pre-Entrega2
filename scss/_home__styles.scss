@@ -1,0 +1,531 @@
+$color__titulo: #D94E81;
+$color__footer: blue;
+$backcolor__propuesta: lightblue;
+$backcolor__reservas: lightpink;
+
+
+/* ANCHO Y ALTO DEL BODY*/
+
+body {
+    height: 2000px;
+    background-color: #F2D0E0;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* ESTILO DE LAS OPCIONES EN LA BARRA MENU*/
+
+
+li:hover {
+    font-size: 23px;
+}
+
+a {
+    text-decoration: none;
+    color: lightskyblue; 
+}
+    
+
+  
+
+/* GRID HIJO - MAIN*/
+
+ .main__grid {
+    grid-area: main;
+ }
+
+/* APLICO NASTING  */
+
+.body__grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 6% 117% 6%;
+    grid-template-areas:
+    "header header header header header header header header header header header header"
+    "main main main main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer footer footer"}
+
+    .header__grid {
+        display: grid;
+        display: flex;
+        grid-area: header;
+        background-color: #D94E81;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; 
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        ". alto"
+        ". bajo";}
+
+        div 
+            .logo {
+            display: flex;}
+            .logo img{
+            height: 100px;
+            align-items: center;}
+        
+
+        
+        .menu__alto {
+            display: flex;
+            width: 500px;
+            height: 50px;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+            justify-content: space-between;
+            list-style: none;
+            font-size: 20px;
+            border-style: none;
+            margin-top: 20px;
+            grid-area: alto;
+        }
+        .menu__bajo {
+            display: flex;
+            width: 610px;
+            height: 50px;
+            flex-direction: row;
+            justify-content:flex-start ;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            align-content: space-around;
+            grid-area: bajo;
+        }
+
+
+    .main__grid {
+        h1 {
+            display: flex;
+            color: $color__titulo;
+            font-size: 75px;
+            border-radius: 5px;
+        }
+    }
+    
+
+/* SLIDER */
+
+.slider__frame {
+	width: 800px;           
+    height: auto;
+	margin-left: 200px;
+	overflow: hidden;
+	
+}
+
+.slider__frame ul {
+	display: flex;
+	padding: 0;
+	width: 500%;
+	animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider__frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider__frame img {
+	width: 100%;
+    
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	20% {margin-left: -100%;}
+	40% {margin-left: -100%;}
+	
+	40% {margin-left: -200%;}
+	60% {margin-left: -200%;}
+	
+	60% {margin-left: -300%;}
+	80% {margin-left: -300%;}
+
+    80% {margin-left: -400%;}
+	100% {margin-left: -400%;}
+
+
+}
+
+ /* TEXTO DERECHA E IMAGEN DEL SALON A LA IZQUIERDA*/   
+ 
+
+.grid__columnas {
+    display: grid;
+    display: flex;
+    grid-template-columns: 50% 50%;
+    gap: 60px;
+    background-color: $backcolor__propuesta; 
+    width: 100%;
+}
+
+#parrafo__izquierda {
+    font-size: 25px;
+    text-align: justify;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+#imagen__derecha {
+    margin-top: 35px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+/* SECCION - NUESTROS CLIENTES NOS SIGUEN ELIGIANDO - CAJAS DE OPINIONES*/
+
+#titulo__clientes {
+    color: $color__titulo;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 35px;
+    }
+
+.parrafos__opiniones {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 50px;
+    grid-template-rows: minmax(100px, 300px);
+    text-align: center;
+}
+
+.background__opiniones {
+    display: grid;
+    background-color: lightyellow;
+    padding: 10px;
+    align-items: center;
+}
+
+/* SECCION RESERVAS: CAJA DE MAPA Y DATOS DE CONTACTO Y HORARIOS*/
+
+.section__reservas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: $backcolor__reservas;    
+}
+
+.box__mapa {
+    margin-top: 30px;
+}
+
+.recuadro__centro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: $color__titulo;
+    border: solid;
+    width: 400px;
+    height: 290px;
+    text-align: center;
+}
+
+.recuadro__derecha {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: $color__titulo;
+    border: solid;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* FOOTER: GRID HIJO  DEL BODY/ GRID PADRE DEL H3 Y DE LAS IMAGENES DE ICONOS DE REDES SOCIALES-*/
+
+.footer__grid {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    ". . . . seguinos seguinos seguinos seguinos seguinos . . . ."
+    ". . . . . facebook instagram twitter . . . . ."
+;
+}
+
+/* ESTILO DEL FOOTER*/
+
+footer {
+    height: 120px;
+    background-color: lightblue;
+    align-items: center;
+}
+
+
+.footer__titulo {
+    color: $color__footer;
+    font-size: 25px;
+    margin-left: 50px;
+    grid-area: seguinos;
+    justify-items: center;
+ }
+    
+.icono__face {
+    grid-area: facebook;
+}
+    
+.icono__inst {
+    grid-area: instagram;
+}
+
+.icono__twit {
+    grid-area: twitter;
+}
+
+/* RESPONSIVE*/
+
+@media (max-width:1024px) {
+
+    
+    #titulo__pagina {
+        font-size: 50px;
+    }    
+            
+    .slider__frame {
+        width: 900px;           
+        margin-left: 70px;
+    }
+
+    .grid__columnas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+        height: 800px;
+        background-color: lightblue;   
+    }
+
+    #parrafo__izquierda {
+        font-size: 18px;
+        text-align: center;
+        height: 190px;
+        width: auto;
+        margin-left: 100px;
+        padding-right: 100px;
+    }
+    
+    #imagen__derecha {
+        margin-bottom: 400px;
+        margin-left: 150px;
+        width: 700px;
+        height: 500px;
+    }
+
+    #titulo__clientes {
+        color: $color__titulo;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+    }
+
+    .parrafos__opiniones {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8fr;
+        text-align: center;
+    }
+    
+    .background__opiniones {
+        display: grid;
+        background-color: lightyellow;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .box__mapa {
+        margin-top: 5px;
+    }
+    
+    .recuadro__centro {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        color: $color__titulo;
+        border: solid;
+        width: 400px;
+        height: 250px;
+        text-align: center;
+    }
+    
+    .recuadro__derecha {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        color: $color__titulo;
+        border: solid;
+        width: 400px;
+        height: 210px;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width:981px) {
+    .slider__frame {
+        width: 700px;           
+        margin-left: 70px;
+    }
+}
+
+@media (max-width:880px) {
+
+       
+    #titulo__pagina {
+        font-size: 45px;
+    }    
+                
+            
+    .slider__frame {
+        width: 600px;           
+        margin-left: 130px;
+    }
+
+        
+    .grid__columnas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+        height: 800px;
+        background-color: lightblue;   
+    }
+        
+    #parrafo__izquierda {
+        font-size: 16px;
+        text-align: center;
+        height: 190px;
+        width: auto;
+        margin-left: 100px;
+        padding-right: 100px;
+    }
+            
+    #imagen__derecha {
+        margin-bottom: 400px;
+        margin-left: 80px;
+        width: 600px;
+    }
+        
+    #titulo__clientes {
+        color: $color__titulo;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 25px;
+    }
+        
+    .parrafos__opiniones {
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8fr;
+        text-align: center;
+    }
+            
+    .background__opiniones {
+        display: grid;
+        background-color: lightyellow;
+        padding: 10px;
+        align-items: center;
+    }
+        
+    .box__mapa {
+        margin-top: 5px;
+    }
+            
+    .recuadro__centro {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        color: $color__titulo;
+        border: solid;
+        width: 400px;
+        height: 250px;
+        text-align: center;
+    }
+            
+    .recuadro__derecha {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: $color__titulo;
+        border: solid;
+        width: 400px;
+        height: 210px;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+@media (max-width:781px) {
+    
+    
+    .background__opiniones {
+        display: grid;
+        background-color: lightyellow;
+        padding: 10px;
+        align-items: center;
+        width: 700px;
+    }
+    
+    .box__mapa {
+    margin-top: 3px;
+    }
+    
+    .recuadro__centro {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        color: $color__titulo;
+        border: solid;
+        width: 350px;
+        height: 167px;
+        text-align: center;
+    }
+        
+    .recuadro__derecha {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: $color__titulo;
+        border: solid;
+        width: 300px;
+        height: 130px;
+        padding: 20px;
+        text-align: center;}
+}
+
+
+@media (max-width:714px) {
+    
+    .slider__frame {
+        width: 400px;           
+        margin-left: 70px;
+    }
+
+    
+    .grid__columnas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+        height: 800px;
+        width: 700px;
+        background-color: lightblue;   
+    }
+    
+    
+    .background__opiniones {
+        width: 700px;
+    }
+}
+
